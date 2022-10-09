@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'AndadaSC';
+  src: local('AndadaSC'), url(../fonts/AndadaSC-Regular.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'AndadaSC';
+  src: local('AndadaSC-Bold'), url(../fonts/AndadaSC-Bold.otf);
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  font-family: 'AndadaSC';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: white;
+
+  font-weight: bold;
+  font-size: 10pt;
+
+  --border-size: 5px;
+  --border-description: var(--border-size) solid black;
+
+  --main-color: #C03E43;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

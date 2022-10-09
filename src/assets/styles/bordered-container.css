@@ -1,0 +1,26 @@
+.bordered-container {
+    border: var(--border-description);
+    padding: 10px;
+    padding-top: 20px;
+
+    height: max-content;
+
+    position: relative;
+
+    min-height: 3rem;
+
+    margin-block: 1.5rem;
+}
+
+.bordered-container h2 {
+    margin: 0;
+    text-align: right;
+    padding: 0 .2em;
+    margin-inline: .3rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    transform: translateY(calc(-.5em - var(--border-size)));
+}

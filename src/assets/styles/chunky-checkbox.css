@@ -1,0 +1,20 @@
+.chunky-checkbox {
+    position: relative;
+    --checkbox-size: 25px;
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+    border: var(--border-description);
+
+    cursor: pointer;
+
+    display: inline-block;
+}
+
+.chunky-checkbox.checked:after {
+    content: "";
+    background: black;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.7);
+}
