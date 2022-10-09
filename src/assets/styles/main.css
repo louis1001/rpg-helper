@@ -1,9 +1,9 @@
-body {
+#main-page {
   max-width: 600px;
   margin: 0 auto;
 }
 
-header {
+#main-page header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -14,20 +14,20 @@ header {
   pointer-events: none;
 }
 
-.editing #player-content {
+#main-page.editing #player-content {
   pointer-events: all;
 }
 
-.name-input * {
+#main-page .name-input * {
   display: inline-block;
   vertical-align: middle;
 }
 
-.name-input input[type="text"] {
+#main-page .name-input input[type="text"] {
   width: 8rem;
 }
 
-main {
+#main-page main {
   display: flex;
   justify-content: space-evenly;
   align-items: top;
@@ -40,15 +40,15 @@ span[data-spacer] {
   width: 5px;
 }
 
-.checklist-item {
+#main-page .checklist-item {
   margin-bottom: 10px;
 }
 
-.checklist-item *{
+#main-page .checklist-item *{
   vertical-align: middle;
 }
 
-.checklist-item:last-child {
+#main-page .checklist-item:last-child {
   margin-bottom: 0px;
 }
 
@@ -68,34 +68,39 @@ h1 {
   text-shadow: .05em .05em #c03e428a;
 }
 
-h2.side-title {
+#main-page h2.side-title {
   display: inline-block;
 }
 
-.xp-container *{
+#main-page .xp-container *{
   vertical-align: middle;
 }
 
-.xp-container h2 {
+#main-page .xp-container h2 {
   margin-inline: 10px;
 }
 
-.belief-container {
+#main-page .belief-container {
   margin-inline: 10px;
 }
 
-.belief-container input[type="text"] {
+#main-page .belief-container input[type="text"] {
   width: 90%;
   padding: 10px;
   border: none;
 }
 
-#clear-btn {
+#main-page .action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#main-page #clear-btn {
   color: rgb(101, 101, 101);
   pointer-events: none;
 }
 
-.editing #clear-btn {
+#main-page.editing #clear-btn {
   color: var(--main-color);
   pointer-events: all;
 }
@@ -104,6 +109,16 @@ button {
   color: var(--main-color);
   padding: 10px;
   cursor: pointer;
+  font-family: inherit;
+}
+
+a, a:visited {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 input[type="text"] {

@@ -1,6 +1,8 @@
 import '../assets/styles/main.css'
 import React from "react";
 
+import { Link } from 'react-router-dom'
+
 import BorderedContainer from '../components/BorderedContainer'
 import StatBlock from '../components/StatBlock';
 import TempChecklist from '../components/TempChecklist';
@@ -47,9 +49,8 @@ export default class Main extends React.Component {
 
         const editButtonText = this.state.editing ? 'Guardar' : 'Editar'
 
-
         return (
-            <div className={editingClass}>
+            <div id='main-page' className={editingClass}>
                 <div id='player-content'>
                     <header>
                         <h1>Wander</h1>
@@ -99,9 +100,13 @@ export default class Main extends React.Component {
                     </div>
                 </div>
 
-                <div className="settings-buttons">
-                    <button id='clear-btn' onClick={() => this.clearPlayer()}>Limpiar</button>
-                    <button onClick={() => this.toggleEditing()}>{editButtonText}</button>
+                <div className='action-buttons'>
+                    <div className="settings-buttons">
+                        <button id='clear-btn' onClick={() => this.clearPlayer()}>Limpiar</button>
+                        <button onClick={() => this.toggleEditing()}>{editButtonText}</button>
+                    </div>
+                    
+                    <Link to="rules">Reglas</Link>
                 </div>
             </div>
         )

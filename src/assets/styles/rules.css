@@ -1,0 +1,47 @@
+
+#rules-page {
+    max-width: 600px;
+    margin: auto;
+    padding: 1em;
+    font-size: 13pt;
+}
+
+#rules-page h1 {
+    text-align: center;
+}
+
+#rules-page h2 {
+    color: var(--main-color)
+}
+
+#rules-page p {
+    margin-block: 1em;
+}
+
+#rules-page span.blank {
+    color: #A6A6A6;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+#rules-page #xp {
+    display: flex;
+
+}
+
+#rules-page #xp p {
+    margin-block: unset;
+}
+
+#rules-page #xp {
+    margin-block: 1em;
+}
+
+#rules-page #xp>p:first-child {
+    max-width: 50%;
+    margin-right: 1em;
+}
+
+strong {
+    color: var(--main-color)
+}
