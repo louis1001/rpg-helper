@@ -93,6 +93,8 @@ h1 {
 #main-page .action-buttons {
   display: flex;
   justify-content: space-between;
+
+  align-items: center;
 }
 
 #main-page #clear-btn {
@@ -119,6 +121,10 @@ a, a:visited {
 
 a:hover {
   text-decoration: underline;
+}
+
+.action-buttons a {
+  padding: 10px;
 }
 
 input[type="text"] {
