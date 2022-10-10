@@ -16,6 +16,8 @@
 
 #rules-page p {
     margin-block: 1em;
+    text-align: justify;
+    /* text-justify: inter-word; */
 }
 
 #rules-page span.blank {
