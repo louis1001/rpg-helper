@@ -26,21 +26,20 @@ const defaultPlayer = {
 export default class Main extends React.Component {
     constructor(props) {
         super(props)
-
-        if (localStorage) {
-            const playerString = localStorage.getItem("user-player")
-            const cachedPlayer = JSON.parse(playerString)
-    
-            this.state = {
-                player: cachedPlayer ?? deepClone(defaultPlayer),
-                editing: false
-            }
-        } else {
-            this.state = {
-                player: deepClone(defaultPlayer),
-                editing: false
-            }
+        
+        this.state = {
+            player: deepClone(defaultPlayer),
+            editing: false
         }
+    }
+
+    componentDidMount() {
+        const playerString = localStorage.getItem("user-player")
+        const cachedPlayer = JSON.parse(playerString)
+
+        this.setState({
+            player: cachedPlayer ?? deepClone(defaultPlayer)
+        })
     }
 
     render() {
