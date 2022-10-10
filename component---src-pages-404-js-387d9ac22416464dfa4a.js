@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkrpg_helper=self.webpackChunkrpg_helper||[]).push([[883],{429:function(e,t,n){n.r(t),n.d(t,{default:function(){return c}});var l=n(7294),r=n(1082);function c(e){return l.createElement("div",{style:{minHeight:"100vh",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}},l.createElement("h1",null,"Ups. Esta pagina no existe"),l.createElement("p",null," ",l.createElement(r.rU,{to:"/"},"Volver al contenido")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-387d9ac22416464dfa4a.js.map
