@@ -7,6 +7,8 @@ import speed from '../assets/images/running.png'
 import brain from '../assets/images/brain.png'
 import heart from '../assets/images/heart.png'
 
+import React from 'react'
+
 function statItem(props, icon, id, name) {
     let lineSeparator = <span className="line-separator"></span>
 

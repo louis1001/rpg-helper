@@ -1,8 +1,15 @@
+import React from 'react'
+
+import { Helmet } from 'react-helmet';
+
 import '../assets/styles/rules.css'
 
 const Rules = () => {
     return (
         <div id='rules-page'>
+            <Helmet>
+                <title>Wander - rules</title>
+            </Helmet>
             <h1>Wander</h1>
 
             <h2>Cómo jugar</h2>

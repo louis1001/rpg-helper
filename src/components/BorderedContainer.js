@@ -1,3 +1,5 @@
+import React from 'react'
+
 import '../assets/styles/bordered-container.css'
 
 export default function BorderedContainer({children, title}) {

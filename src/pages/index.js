@@ -1,12 +1,14 @@
 import '../assets/styles/main.css'
 import React from "react";
 
-import { Link } from 'react-router-dom'
+import {Link} from 'gatsby'
 
 import BorderedContainer from '../components/BorderedContainer'
 import StatBlock from '../components/StatBlock';
 import TempChecklist from '../components/TempChecklist';
 import CheckCounter from '../components/CheckCounter';
+
+import { Helmet } from 'react-helmet';
 
 const defaultPlayer = {
     name: "",
@@ -25,12 +27,19 @@ export default class Main extends React.Component {
     constructor(props) {
         super(props)
 
-        const playerString = localStorage.getItem("user-player")
-        const cachedPlayer = JSON.parse(playerString)
-
-        this.state = {
-            player: cachedPlayer ?? deepClone(defaultPlayer),
-            editing: false
+        if (localStorage) {
+            const playerString = localStorage.getItem("user-player")
+            const cachedPlayer = JSON.parse(playerString)
+    
+            this.state = {
+                player: cachedPlayer ?? deepClone(defaultPlayer),
+                editing: false
+            }
+        } else {
+            this.state = {
+                player: deepClone(defaultPlayer),
+                editing: false
+            }
         }
     }
 
@@ -51,6 +60,9 @@ export default class Main extends React.Component {
 
         return (
             <div id='main-page' className={editingClass}>
+                <Helmet>
+                    <title>Wander rpg</title>
+                </Helmet>
                 <div id='player-content'>
                     <header>
                         <h1>Wander</h1>
